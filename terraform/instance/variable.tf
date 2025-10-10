@@ -3,7 +3,7 @@ variable "myami" {
   default = "ami-0bbdd8c17ed981ef9"
 }
 variable "instance_type" {
-  default = t2.micro
+  default = "t2.micro"
 }
 variable "region" {
   default = "us-east-1"
