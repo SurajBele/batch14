@@ -1,0 +1,9 @@
+- name: my 1st playbook
+  hosts: all
+  tasks:
+    - name: 1st task
+      debug:
+        msg: "hello this is ansible calling"
+    - name:
+      debug:
+        msg: " this is a 2nd task text"

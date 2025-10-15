@@ -2,9 +2,7 @@ variable "myami" {
   description = "this is my ami value"
   default = "ami-0bbdd8c17ed981ef9"
 }
-variable "instance_type" {
-  default = "t2.micro"
-}
+variable "instance_type" {}
 variable "region" {
   default = "us-east-1"
 }

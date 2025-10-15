@@ -1,4 +1,3 @@
-
 resource "aws_instance" "myec2" {
  ami =  var.myami
  instance_type = var.instance_type
@@ -9,6 +8,3 @@ resource "aws_instance" "myec2" {
    env = var.env
  }
 }
-
-
-
