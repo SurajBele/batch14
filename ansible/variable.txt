@@ -1,1 +1,1 @@
-animal = "jiraff"
+animal: "jiraff"
