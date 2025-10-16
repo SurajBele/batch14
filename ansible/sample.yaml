@@ -20,3 +20,11 @@
         msg: "{{animal}}"
       vars:
         animal: "lion"  
+    - name: check hostname
+      shell: hostname
+      register: URL
+
+    - name: print register value (hostname)
+      debug:
+        msg: "{{URL}}"
+  
