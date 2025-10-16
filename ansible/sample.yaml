@@ -1,9 +1,9 @@
 - name: my 1st playbook
   hosts: all
-  vars:
-    animal: "tiger"
-  vars_files:
-    - ./variable.txt
+  # vars:
+  #   animal: "tiger"
+  # vars_files:
+  #   - ./variable.txt
   vars_prompt:
   - name: animal
     prompt: please enter the variable value
