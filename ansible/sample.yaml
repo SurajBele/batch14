@@ -26,5 +26,5 @@
 
     - name: print register value (hostname)
       debug:
-        msg: "{{URL}}"
+        msg: "{{URL.stdout}}"
   
