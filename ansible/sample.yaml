@@ -9,3 +9,8 @@
     - name: 2ns task
       debug:
         msg:  hello "{{animal}}"
+    - name: local variable task
+      debug:
+        msg: "{{animal}}"
+      vars:
+        animal: "lion"  
