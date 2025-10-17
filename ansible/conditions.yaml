@@ -6,11 +6,12 @@
       yum:
         name: httpd
         state: latest
-      ignore_errors: true
+      when: ansible_os_family == "Redhat"
     - name: install apache2
       apt: 
         name: apache2
         state: latest
+      when: ansible_os_family == "Debian"
         
         
 
