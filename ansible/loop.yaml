@@ -1,0 +1,18 @@
+- name: loop testing
+  hosts: all
+  tasks:
+    - name: print names
+      debug: 
+        msg: "{{item}}"
+      loop:
+        - apple 
+        - banana
+        - cherry
+    - name: install pkgs
+      package: 
+        - name: "{{item}}"
+          state: latest
+      loop: 
+        - wget
+        - vim
+        - apache2
