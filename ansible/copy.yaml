@@ -8,6 +8,7 @@
       tags:
         - copy
         - testing
+        - tag1
     - name: copy webpage
       copy:
        src: ./index.html
