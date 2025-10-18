@@ -11,6 +11,7 @@
       blockinfile:
         marker: "<!-- {mark} ANSIBLE MANAGED BLOCK -->"
         path: /var/www/html/index.html
+        regexp: '^<h1>'
         block:
           <h1> Hello this is 1st line </h1>
           <h1> Hello this is 2st line </h1>
