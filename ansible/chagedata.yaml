@@ -1,9 +1,24 @@
 - name: change data in index file
   hosts: all
   tasks:
-    - name: change line
-      lineinfile:
+    # - name: change line
+    #   lineinfile:
+    #     path: /var/www/html/index.html
+    #     regexp: '^<h1>'
+    #     line: <h1>Hello this is new line</h1>
+
+    - name: adding multiple line
+      blockinfile:
         path: /var/www/html/index.html
-        regexp: '^<h1>'
-        line: <h1>Hello this is new line</h1>
+        block:
+          <h1> Hello this is 1st line </h1>
+          <h1> Hello this is 2st line </h1>
+          <h1> Hello this is 3st line </h1>
+          <h1> Hello this is 4st line </h1>
+
+    - name: restart apache2
+      systemd:
+        name: apache2
+        state: restarted
+        daemon_reload: true
         
