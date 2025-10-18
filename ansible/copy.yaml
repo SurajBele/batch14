@@ -5,6 +5,9 @@
       package:
         name: apache2
         state: latest
+      tags:
+        - copy
+        - testing
     - name: copy webpage
       copy:
        src: ./index.html
