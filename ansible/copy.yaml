@@ -1,0 +1,16 @@
+- name: change webpage
+  hosts: all
+  tasks: 
+    - name: copy file
+      package:
+        name: apache2
+        state: latest
+    - name: copy webpage
+      copy:
+       src: ./index.html
+       dest: /var/www/html/index.html
+    - name: restart apache2
+      systemd:
+        name: apache2
+        state: restarted
+        daemon_reload: true
