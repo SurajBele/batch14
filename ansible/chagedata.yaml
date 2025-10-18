@@ -6,3 +6,4 @@
         path: /var/www/html/index.html
         regexp: '^h1'
         line: <h1>Hello this is new line</h1>
+        state: absent
