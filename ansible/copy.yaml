@@ -1,7 +1,7 @@
 - name: change webpage
   hosts: all
   tasks: 
-    - name: copy file
+    - name: install apache2
       package:
         name: apache2
         state: latest
