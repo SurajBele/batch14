@@ -3,13 +3,12 @@
 # tasks file for weserver.role
 - name: task 1 install apache2
   package:
-   name: "{{pkg}}"
-   state: latest
-   enable: true
+    name: "{{pkg}}"
+    state: latest
 - name: change index page
   copy: 
    src: index.html
    dest: /var/www/html/index.html
-   notify:
+  notify:
      - restart apache2
 
