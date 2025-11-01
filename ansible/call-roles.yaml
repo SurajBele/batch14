@@ -1,4 +1,5 @@
 - name: execute roles
   hosts: all 
+  become: true
   roles:
     - weserver.role
