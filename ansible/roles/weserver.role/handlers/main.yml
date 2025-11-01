@@ -1,3 +1,8 @@
 #SPDX-License-Identifier: MIT-0
 ---
 # handlers file for weserver.role
+- name: restart apache2
+  systemd:
+   name: "{{pkg}}"
+   state: restarted
+   daemon_reload: true
