@@ -19,8 +19,7 @@ pipeline {
             steps {
 
                 withSonarQubeEnv( installationName: 'sonar-server', credentialsId: 'sonar-token') {
-                sh '/opt/apache-maven-3.9.11/bin/mvn clean verify sonar:sonar \
-                -Dsonar.projectKey=myproject -Dsonar.projectName='myproject''
+                sh '/opt/apache-maven-3.9.11/bin/mvn clean verify sonar:sonar -Dsonar.projectKey=myproject -Dsonar.projectName='myproject''
                 }
                 echo "testing successful"
             }
