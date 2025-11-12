@@ -9,16 +9,16 @@ pipeline {
                 echo "pulling successful"
             }
         }
-        stage('Build') {
-            steps {
-                sh 'sudo /opt/apache-maven-3.9.11/bin/mvn clean package'
-                echo "building successful"
-            }
-        }
+        // stage('Build') {
+        //     steps {
+        //         sh 'sudo /opt/apache-maven-3.9.11/bin/mvn clean package'
+        //         echo "building successful"
+        //     }
+        // }
         stage('Test') {
             steps {
               withSonarQubeEnv( installationName: 'sonar-server', credentialsId: 'sonar-token') {
-                sh 'sudo /opt/apache-maven-3.9.11/bin/mvn verify sonar:sonar -Dsonar.projectKey=myproject'
+                sh 'sudo /opt/apache-maven-3.9.11/bin/mvn clean package sonar:sonar -Dsonar.projectKey=myproject'
                 echo "testing successful"
               }    
             }
